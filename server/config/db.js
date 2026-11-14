@@ -6,7 +6,7 @@ const pool = mysql.createPool(
     {
         host: process.env.DB_HOST, // ONDE O BANCO ESTÁ HOSPEDADO
         user: process.env.DB_USER, // USUÁRIO QUE FARÁ A CONEXÃO
-        passoword: process.env.DB_PASSWORD, // SENHA DO USUÁRIO
+        password: process.env.DB_PASSWORD, // SENHA DO USUÁRIO
         databse: process.env.DB_NAME, //BANCO AO QUAL SE DESEJA CONECTAR
         //SE TODOS ESTIVERAM OCUPADOS. DEIXA UM ESPERANDO, SEM DAR ERRO
         waitForConnections: true,
