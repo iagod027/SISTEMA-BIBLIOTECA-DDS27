@@ -1,0 +1,63 @@
+<!-- IMPORTAÇÃO DO HEADER -->
+<%- include('../partials/header') %>
+
+<main class="container my-2 flex-grow-1">
+  <h1 class="fg-accent fs-6x1">ESTOU NA PÁGINA DE CADASTRAR</h1>
+
+  <!-- CRIAR FORMULÁRIO DE CADASTRO -->
+  <div class="d-flex flex-column">
+    <form action="/usuarios/login" method="post">
+      <!-- CAIXINHA DE NOME -->
+      <div class="form-group">
+        <label for="nome"> Nome: </label>
+        <input
+          class="form-control"
+          type="text"
+          name="nome"
+          id="nome"
+          required
+        />
+      </div>
+
+      <!-- CAIXINHA DE EMAIL -->
+      <div class="form-group">
+        <label for="email"> Email: </label>
+        <input
+          class="form-control"
+          type="email"
+          name="email"
+          id="email"
+          required
+        />
+      </div>
+
+      <!-- CAIXINHA DE SENHA -->
+      <div class="form-group">
+        <label for="senha"> Senha: </label>
+        <input
+          class="form-control"
+          type="password"
+          name="senha"
+          id="senha"
+          required
+        />
+      </div>
+
+      <!-- CAIXINHA DE PERFIL -->
+      <div class="form-group">
+        <label for="perfil"> Perfil: </label>
+        <select name="perfil" id="perfil" class="form-control">
+          <option value="adm">Administrador</option>
+          <option value="bibliotecaria">Bibliotecaria</option>
+        </select>
+      </div>
+      <!-- BOTÃO DE ENVIO -->
+      <button type="submit" class="btn-subtle theme-success mt-3">
+        Cadastrar
+      </button>
+    </form>
+  </div>
+</main>
+
+<!-- IMPORTAÇÃO DO FOOTER -->
+<%- include('../partials/footer') %>

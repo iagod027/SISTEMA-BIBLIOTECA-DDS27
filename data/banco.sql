@@ -80,7 +80,7 @@ JOIN
 ON
 	emp.leitor = le.id_leitor -- iguala o campo pelo nome das colunas
 JOIN
-	tb_livro AS li
+	tb_livros AS li
 ON
 	emp.livro = li.id_livro; -- aqui também
 ;
