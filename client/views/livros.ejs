@@ -1,0 +1,61 @@
+<!-- IMPORTAÇÃO DO HEADER -->
+<%- include('../partials/header') %>
+
+<main class="my-2 flex-grow-1">
+  <h1 class="fg-accent fs-6x1">CRIAR NOVO LIVRO</h1>
+
+  <!-- PAGINA DE CRIAR LIVROS -->
+  <div class="d-flex flex-column-2">
+    <form action="/livros" method="post">
+
+      <!-- CAIXINHA DE TÍTULO -->
+      <div class="form-group">
+        <label for="titulo"> Título: </label>
+        <input
+          class="form-control"
+          type="titulo"
+          name="titulo"
+          id="titulo"
+          required
+        />
+      </div>
+
+      <!-- CAIXINHA DE AUTOR -->
+      <div class="form-group">
+        <label for="autor"> Autor: </label>
+        <input
+          class="form-control"
+          type="autor"
+          name="autor"
+          id="autor"
+          required
+        />
+      </div>
+
+      <!-- CAIXINHA DE ANO DE LANÇAMENTO -->
+      <div class="form-group">
+        <label for="data"> Ano de Lançamento: </label>
+        <input
+          class="form-control"
+          type="data"
+          name="data"
+          id="data"
+          required
+        />
+      </div>
+
+      <!-- CAIXINHA DE PERFIL -->
+      <div class="form-group">
+        <label for="genero"> Gênero: </label>
+        <select name="genero" id="genero" class="form-control">
+          <option value="acao">Ação</option>
+          <option value="ficcao">Ficção</option>
+          <option value="terror">Terror</option>
+        </select>
+      </div>
+    </form>
+  </div>
+</main>
+
+<!-- IMPORTAÇÃO DO FOOTER -->
+<%- include('../partials/footer') %>
