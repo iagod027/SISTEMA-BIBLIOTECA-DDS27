@@ -20,8 +20,16 @@ module.exports = {
         return resultado.insertId
     },
     //READ
-    listarUsuarios: () => {
-        console.log("TOMA AI OS USUÁRIOS");
+    listarUsuarios: async () => {
+        //VARIÁVEL PARA GUARDAR O COMANDO SQL
+        const sql = `SELECT * FROM tb_usuarios`
+        
+        // EXECUTA O SQL
+        const [linhas] = await db.execute(sql)
+
+        //RETORNA PRO CONTROLLER O RESULTADO
+        return linhas
+
     },
     //UPDATE
     atualizarUsuario: () => {
